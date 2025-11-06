@@ -1,0 +1,161 @@
+{% assign SeriesID = 'series' %} {% assign SeriesQuery = 'series=' %} {% assign
+SpeakerID = 'speaker' %} {% assign SpeakerQuery = 'speaker=' %} {% assign BookID
+= 'book' %} {% assign BookQuery = 'book=' %} {% assign KeywordID = 'keyword' %}
+{% assign KeywordQuery = 'keyword=' %} {% assign ClearFiltersID =
+'clear-filters' %} {% assign SermonFinderURL =
+'https://www.perimeter.org/sermons/finder/?' %} {% assign SermonDetailsURL =
+'https://www.perimeter.org/sermons/sermon-details/?id=' %}
+
+<div class="filter-container">
+    <form class="filters">
+        <div class="search-container">
+            <input
+                type="text"
+                id="{{ KeywordID }}"
+                placeholder="Search keyword..."
+                class="form-control mb-2 filter"
+            />
+        </div>
+        <div class="series-container">
+            <select
+                id="{{ SeriesID }}"
+                class="form-select mb-2"
+                aria-label="series"
+            >
+                <option value="">All Series</option>
+                {% for element in DataSet2 %}
+                <option value="{{ element.Sermon_Series_ID }}">
+                    {{ element.Series_Name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="speaker-container">
+            <select
+                id="{{ SpeakerID }}"
+                class="form-select mb-2"
+                aria-label="speaker"
+            >
+                <option value="">All Speakers</option>
+                {% for element in DataSet3 %}
+                <option value="{{ element.Speaker_ID }}">
+                    {{ element.Display_Name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="book-container">
+            <select
+                id="{{ BookID }}"
+                class="form-select mb-2"
+                aria-label="book"
+            >
+                <option value="">All Books</option>
+                {% for element in DataSet4 %}
+                <option value="{{ element.Book_ID }}">
+                    {{ element.Book_Name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+    </form>
+
+    <button
+        id="{{ ClearFiltersID }}"
+        class="btn btn-secondary nectar-button medium regular accent-color has-icon regular-button"
+        role="button"
+    >
+        Clear Filters
+    </button>
+</div>
+
+<div
+    id="series-bio-container"
+    class="series-bio-container"
+    style="display: none"
+>
+    {% for sermon in DataSet1 limit: 1 %}
+    <div class="series-bio" id="series-bio">
+        <div class="bio-space"></div>
+
+        <div class="series-bio-info-wrapper">
+            <h2 class="sermon-title">{{ sermon.Series_Title }}</h2>
+            {% if sermon.Series_Subtitle %}
+            <h4 class="series-subtitle">{{ sermon.Series_Subtitle }}</h4>
+            {% endif %}
+            <p class="series-description">{{ sermon.Series_Description }}</p>
+        </div>
+        <div class="recent-image-wrapper">
+            <div
+                class="recent-sermon-graphic"
+                style="background-image: url('{{ sermon.Photo_URL }}');"
+            ></div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<ul id="sermon-list" class="sermon-wrapper">
+    {% for sermon in DataSet1 %}
+    <li class="sermon-card">
+        <a href="{{ SermonDetailsURL }}{{ sermon.Sermon_ID }}" class="linkwrap">
+            <div class="sermon-image-wrapper">
+                <img class="sermon-image" src="{{ sermon.Thumbnail_URL }}" />
+            </div>
+        </a>
+        <div class="sermon-info-wrapper">
+            <div class="meta-holder">
+                <div class="date-holder">
+                    <h4 class="sermon-dates">
+                        {{ sermon.Sermon_Date_Formatted }}
+                    </h4>
+                </div>
+                <div class="series-holder">
+                    <h3 class="sermon-series">
+                        <a
+                            class="sermon-series-link"
+                            href="{{ SermonFinderURL }}{{ SeriesQuery }}{{ sermon.Sermon_Series_ID }}"
+                        >
+                            {{ sermon.Series_Title }}
+                        </a>
+                    </h3>
+                </div>
+            </div>
+            <h2 class="sermon-title">
+                <a
+                    class="sermon-title-link"
+                    href="{{ SermonDetailsURL }}{{ sermon.Sermon_ID }}"
+                >
+                    {{ sermon.Sermon_Title }}
+                </a>
+            </h2>
+            {% if sermon.Short_Description %}
+            <p class="sermon-description">{{ sermon.Short_Description }}</p>
+            {% endif %}
+            <div class="bottom-meta-holder">
+                <div class="speaker-holder">
+                    <h5 class="sermon-speaker">
+                        <a
+                            class="sermon-speaker-link"
+                            href="{{ SermonFinderURL }}{{ SpeakerQuery }}{{ sermon.Speaker_ID }}"
+                        >
+                            {{ sermon.Speaker }}
+                        </a>
+                    </h5>
+                </div>
+                <div class="book-holder">
+                    <p class="sermon-book">
+                        Book:
+                        <a
+                            class="sermon-book-link"
+                            href="{{ SermonFinderURL }}{{ BookQuery }}{{ sermon.Book_ID }}"
+                        >
+                            {{ sermon.Book_Name }}
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
