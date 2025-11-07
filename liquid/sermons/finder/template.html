@@ -140,8 +140,8 @@ SpeakerID = 'speaker' %} {% assign SpeakerQuery = 'speaker=' %} {% assign BookID
                         </a>
                     </h5>
                 </div>
-                {% if sermon.Book_Name != nil and sermon.Book_Name != "" %}
                 <div class="book-holder">
+                    {% if sermon.Book_Name != nil and sermon.Book_Name != "" %}
                     <p class="sermon-book">
                         Book:
                         <a
@@ -151,8 +151,10 @@ SpeakerID = 'speaker' %} {% assign SpeakerQuery = 'speaker=' %} {% assign BookID
                             {{ sermon.Book_Name }}
                         </a>
                     </p>
+                    {% else %}
+                    <p class="sermon-book"></p>
+                    {% endif %}
                 </div>
-                {% endif %}
             </div>
         </div>
     </li>
