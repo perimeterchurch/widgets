@@ -2,9 +2,7 @@
 SpeakerID = 'speaker' %} {% assign SpeakerQuery = 'speaker=' %} {% assign BookID
 = 'book' %} {% assign BookQuery = 'book=' %} {% assign KeywordID = 'keyword' %}
 {% assign KeywordQuery = 'keyword=' %} {% assign ClearFiltersID =
-'clear-filters' %} {% assign SermonFinderURL =
-'https://www.perimeter.org/sermons/finder/?' %} {% assign SermonDetailsURL =
-'https://www.perimeter.org/sermons/sermon-details/?id=' %}
+'clear-filters' %}
 
 <div class="filter-container">
     <form class="filters">
@@ -96,9 +94,11 @@ SpeakerID = 'speaker' %} {% assign SpeakerQuery = 'speaker=' %} {% assign BookID
 </div>
 
 <ul id="sermon-list" class="sermon-wrapper">
-    {% for sermon in DataSet1 %}
+    {% for sermon in DataSet1 %} {% assign sermonDetailsURL = sermon.baseURL |
+    append: sermon.detailSlug | append: "?id=" | append: sermon.Sermon_ID %} {%
+    assign sermonFinderURL = sermon.baseURL | append: sermon.finderSlug %}
     <li class="sermon-card">
-        <a href="{{ SermonDetailsURL }}{{ sermon.Sermon_ID }}" class="linkwrap">
+        <a href="{{ sermonDetailsURL }}" class="linkwrap">
             <div class="sermon-image-wrapper">
                 <img class="sermon-image" src="{{ sermon.Thumbnail_URL }}" />
             </div>
@@ -114,7 +114,7 @@ SpeakerID = 'speaker' %} {% assign SpeakerQuery = 'speaker=' %} {% assign BookID
                     <h3 class="sermon-series">
                         <a
                             class="sermon-series-link"
-                            href="{{ SermonFinderURL }}{{ SeriesQuery }}{{ sermon.Sermon_Series_ID }}"
+                            href="{{ sermonFinderURL }}?{{ SeriesQuery }}{{ sermon.Sermon_Series_ID }}"
                         >
                             {{ sermon.Series_Title }}
                         </a>
@@ -122,10 +122,7 @@ SpeakerID = 'speaker' %} {% assign SpeakerQuery = 'speaker=' %} {% assign BookID
                 </div>
             </div>
             <h2 class="sermon-title">
-                <a
-                    class="sermon-title-link"
-                    href="{{ SermonDetailsURL }}{{ sermon.Sermon_ID }}"
-                >
+                <a class="sermon-title-link" href="{{ sermonDetailsURL }}">
                     {{ sermon.Sermon_Title }}
                 </a>
             </h2>
@@ -137,23 +134,25 @@ SpeakerID = 'speaker' %} {% assign SpeakerQuery = 'speaker=' %} {% assign BookID
                     <h5 class="sermon-speaker">
                         <a
                             class="sermon-speaker-link"
-                            href="{{ SermonFinderURL }}{{ SpeakerQuery }}{{ sermon.Speaker_ID }}"
+                            href="{{ sermonFinderURL }}?{{ SpeakerQuery }}{{ sermon.Speaker_ID }}"
                         >
                             {{ sermon.Speaker }}
                         </a>
                     </h5>
                 </div>
+                {% if sermon.Book_Name %}
                 <div class="book-holder">
                     <p class="sermon-book">
                         Book:
                         <a
                             class="sermon-book-link"
-                            href="{{ SermonFinderURL }}{{ BookQuery }}{{ sermon.Book_ID }}"
+                            href="{{ sermonFinderURL }}?{{ BookQuery }}{{ sermon.Book_ID }}"
                         >
                             {{ sermon.Book_Name }}
                         </a>
                     </p>
                 </div>
+                {% endif %}
             </div>
         </div>
     </li>
