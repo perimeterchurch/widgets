@@ -140,7 +140,7 @@ SpeakerID = 'speaker' %} {% assign SpeakerQuery = 'speaker=' %} {% assign BookID
                         </a>
                     </h5>
                 </div>
-                {% if sermon.Book_Name %}
+                {% if sermon.Book_Name != nil and sermon.Book_Name != "" %}
                 <div class="book-holder">
                     <p class="sermon-book">
                         Book:
