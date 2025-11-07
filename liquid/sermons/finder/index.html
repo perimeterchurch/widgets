@@ -1,16 +1,40 @@
-<div
-    id="sermon-finder-widget"
-    data-component="CustomWidget"
-    data-sp="api_custom_Sermon_Finder_Widget"
-    data-params="@Service_Type=1&@Sermon_Link_Type_ID=6&@Sermon_Series_Type_ID=1"
-    data-template="https://cdn.jsdelivr.net/gh/perimeterchurch/widgets@main/liquid/sermons/finder/template.html"
-    data-requireUser="false"
-    data-cache="false"
-    data-debug="false"
-    data-host="perimeter"
-></div>
-<script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/gh/perimeterchurch/widgets@main/liquid/sermons/finder/script.js"
-></script>
-<script src="https://cdn.jsdelivr.net/gh/perimeterchurch/widgets@main/scripts/PerimeterCustomWidget.js"></script>
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Sermon Finder Widget</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- <div -->
+        <!--     id="sermon-finder-widget" -->
+        <!--     data-component="CustomWidget" -->
+        <!--     data-sp="api_custom_Sermon_Finder_Widget" -->
+        <!--     data-params="@Service_Type=1&@Sermon_Link_Type_ID=6&@Sermon_Series_Type_ID=1" -->
+        <!--     data-template="https://cdn.jsdelivr.net/gh/perimeterchurch/widgets@main/liquid/sermons/finder/template.html" -->
+        <!--     data-requireUser="false" -->
+        <!--     data-cache="false" -->
+        <!--     data-debug="false" -->
+        <!--     data-host="perimeter" -->
+        <!-- ></div> -->
+        <div
+            id="sermon-finder-widget"
+            data-component="CustomWidget"
+            data-sp="api_custom_Sermon_Finder_Widget"
+            data-params="@Service_Type=1&@Sermon_Link_Type_ID=6&@Sermon_Series_Type_ID=1"
+            data-template="template.html"
+            data-requireUser="false"
+            data-cache="false"
+            data-debug="false"
+            data-host="perimeter"
+        ></div>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/gh/perimeterchurch/widgets@main/liquid/sermons/finder/script.js"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/gh/perimeterchurch/widgets@main/scripts/PerimeterCustomWidget.js"></script>
+    </body>
+</html>

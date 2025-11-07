@@ -1,0 +1,452 @@
+:root {
+    --mobile-container-width: 95% !important;
+}
+
+.row .col img {
+    margin-bottom: 5px !important;
+}
+
+.intro-text {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+ul li {
+    list-style: inherit !important;
+}
+
+iframe.esv-crossref {
+    width: 500px !important;
+    height: 350px !important;
+}
+
+p a {
+    text-decoration: none !important;
+}
+
+#play-button,
+.play-button.nectar-button.large.regular.accent-color.has-icon.regular-button {
+    padding-left: 26px !important;
+    color: #60bbe9 !important;
+}
+
+.bio-sapce {
+    min-height: 50px;
+}
+
+.sermon-book-link {
+    transition: color 0.3s;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+.sermon-book-link:hover {
+    color: inherit;
+}
+
+.all-series-link {
+    color: #72abbf !important;
+    text-decoration: none !important;
+}
+
+.series-bio {
+    display: flex !important;
+    flex-direction: row;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    border-radius: 0px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.recent-image-wrapper {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    flex: 1 1 50%;
+    min-width: 300px;
+}
+
+.recent-sermon-graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .recent-image-wrapper {
+        width: 100%;
+        /* Make it full width on mobile */
+        height: auto;
+        padding-top: 56.25%;
+        /* Adjust aspect ratio for mobile */
+        min-width: 0;
+        /* Remove min-width for mobile */
+    }
+
+    .recent-sermon-graphic {
+        background-size: contain;
+        /* Ensure full image is visible on mobile */
+        background-position: center;
+    }
+}
+
+.sermon-title {
+    font-size: 51px !important;
+    margin-top: 2px !important;
+    line-height: 1.2 !important;
+    font-weight: 400;
+}
+
+.sermon-series {
+    font-size: 16px !important;
+}
+
+.sermon-speaker {
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
+
+.sermon-date {
+    padding-bottom: 0 !important;
+}
+
+.sermon-dates {
+    font-size: 16px !important;
+    font-style: italic !important;
+}
+
+.sermon-links {
+    margin-top: 40px !important;
+}
+
+.sermon-description {
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.sermon-book {
+    font-size: 16px !important;
+}
+
+.sermon-book a {
+    color: rgb(96, 187, 233);
+    text-decoration: none !important;
+}
+
+.sermon-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    /* ensures the image covers the area */
+    border-radius: 0px;
+    display: block;
+}
+
+.load-more-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 20px auto;
+    display: block;
+}
+
+.hide-sermon {
+    display: none;
+}
+
+.sermon-wrapper {
+    display: grid;
+    padding: 20px 0 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 22px;
+    margin-left: 0 !important;
+}
+
+.sermon-header {
+    padding: 20px;
+    margin: auto;
+}
+
+.sermon-card {
+    background: white;
+    transition: 0.3s;
+    width: 100%;
+    overflow: hidden;
+    text-align: left !important;
+    margin-bottom: 30px;
+    border: 1px solid #e3e3e3;
+    display: flex;
+    flex-direction: column;
+}
+
+.sermon-image-wrapper {
+    position: relative;
+    border-radius: 0px !important;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sermon-image-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sermon-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* ensures the image covers the area */
+    border-radius: 0px;
+    display: block;
+}
+
+.sermon-info-wrapper {
+    text-align: left;
+    padding: 0px 15px 8px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.series-bio-info-wrapper {
+    text-align: left;
+    padding: 8px 50px 8px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    flex: 1 1 50%;
+    min-width: 300px;
+}
+
+.sermon-title a {
+    font-size: 25px !important;
+    line-height: 28px !important;
+    font-weight: 400;
+    padding: 0px 0 5px 0px !important;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.sermon-dates {
+    color: #787878;
+    box-sizing: border-box;
+    padding: 2px 0 0 0px !important;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/*******FILTERS*******/
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-container {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+}
+
+.form-control {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 17px 0 40px;
+    height: 47px !important;
+    line-height: 47px !important;
+    margin-top: 5px !important;
+    margin-bottom: 0 !important;
+    border: 1px solid #d5d5d5 !important;
+    color: #1c2a36;
+    font-size: 13.25px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.series-container,
+.speaker-container,
+.book-container {
+    display: inline-block;
+    text-align: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 0 7px;
+    margin-bottom: 5px;
+}
+
+.series-container {
+    padding-left: 0 !important;
+}
+
+.book-container {
+    padding-right: 0 !important;
+}
+
+.form-select {
+    padding: 0 30px 0 17px !important;
+    height: 47px !important;
+    border: 1px solid #d5d5d5 !important;
+    border-radius: 5px;
+    margin: 5px 0 5px 0 !important;
+    display: inline-block;
+    font-size: 13.25px !important;
+    cursor: pointer;
+    background-position:
+        right 12px top 55%,
+        0 0 !important;
+    width: 100% !important;
+    color: #1c2a36;
+}
+
+#ClearFilters,
+#clear-filters {
+    font-size: 14px !important;
+    padding: 15px 22px !important;
+    border: 0px !important;
+    background-color: #60bbe9 !important;
+    color: #fff !important;
+    cursor: pointer !important;
+}
+
+.date-holder,
+.series-holder,
+.speaker-holder,
+.book-holder {
+    display: inline-block;
+}
+
+.meta-holder {
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 16px !important;
+}
+
+.date-holder h4,
+.speaker-holder h5 {
+    padding-right: 16px !important;
+    margin-right: 13px;
+    border-right: 1px solid #e3e3e3;
+}
+
+.bottom-meta-holder {
+    border-top: 1px solid #e3e3e3;
+    margin-top: 4px !important;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkwrap {
+    position: relative;
+}
+
+.sermon-image-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.linkwrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/*** Infinite Scroll CSS ***/
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 55vh;
+    width: calc((100% / 3) - 16px);
+    margin: 8px;
+    border-radius: 3px;
+    transition: all 200ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-actions {
+    margin: 8px;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#loader {
+    display: flex;
+}
+
+.skeleton-card {
+    height: 55vh;
+    width: calc((100% / 3) - 16px);
+    margin: 8px;
+    border-radius: 3px;
+    transition: all 200ms ease-in-out;
+    position: relative;
+    background-color: #eaeaea;
+}
+
+.skeleton-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.2) 20%,
+        rgba(255, 255, 255, 0.5) 60%,
+        rgba(255, 255, 255, 0)
+    );
+    animation: load 1s infinite;
+}
+
+@keyframes load {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .skeleton-card::after {
+        animation: none;
+    }
+}
