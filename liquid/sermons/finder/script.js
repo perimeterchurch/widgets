@@ -1,6 +1,9 @@
 const SermonFinderID = 'sermon-finder-widget';
+// const StoredProcParams =
+//     '@Service_Type=1&@Sermon_Link_Type_ID=6&@Sermon_Series_Type_ID=1';
+     
 const StoredProcParams =
-    '@Service_Type=1&@Sermon_Link_Type_ID=6&@Sermon_Series_Type_ID=1';
+    '@Service_Type=1&@Sermon_Link_Type_ID=6&@IncludeSeries=0&@IncludeCompilations=1&@Sermon_Link_Type_ID=1';
 
 const actions = [
     {
