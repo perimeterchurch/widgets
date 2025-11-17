@@ -1,0 +1,193 @@
+* {
+    font-family: sweet-sans-pro, 'Noto Sans', Helvetica, sans-serif !important;
+}
+
+:host {
+    --form-field-border: #09243f;
+    --form-field-border--active: #09243f;
+
+    --color-gray-900: oklch(21% 0.034 264.665);
+    --root-text-color: oklch(21% 0.034 264.665);
+
+    --primary: #60bbe9;
+    --primary-focus: #1c90ca;
+
+    font-family: sweet-sans-pro, 'Noto Sans', Helvetica, sans-serif !important;
+}
+
+/* Typography */
+h1,
+h2,
+/* h3, */
+/* h4, */
+h5 {
+    font-family: freight-display-pro !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+.mppw-form-field_instruction_font {
+    font-size: 1rem;
+
+    color: var(--color-gray-900) !important;
+}
+
+#registrationForm.mppw-form.mppw-form-validate
+    div#productOptionsWrapper
+    div#productOptionsContainer.product-form
+    div.mppw-form-field-alt.mpp-mt-10
+    div.product-form__control
+    table.mppw-product-options
+    tbody
+    tr
+    td.option-name {
+    color: var(--color-gray-900) !important;
+}
+
+#userHasRegisteredContainer > div:nth-child(1),
+.mppw-form-field__label,
+.mppw-product-options,
+.mppw-product-description {
+    color: var(--color-gray-900) !important;
+
+    background: none !important;
+}
+
+#userHasRegisteredContainer > div:nth-child(1),
+.mppw-form-field__label {
+    font-weight: bold !important;
+}
+
+/* Section headings / titles */
+#addressFormWrapper > h3:nth-child(1),
+#productOptionsTitle {
+    margin: 1rem 0 0 0 !important;
+}
+
+/* Details block (kept separate since it has extra styling) */
+#detailsContainer {
+    display: none !important;
+
+    font-size: 0 !important;
+}
+
+/* Buttons */
+
+#registerAndCheckoutButton,
+#addAnotherButton {
+    margin: 0.5rem 0 0 0 !important;
+}
+
+#addPromoCodeButton {
+    max-width: none !important;
+
+    margin: 0 !important;
+
+    font-size: 1rem !important;
+}
+
+#registerAndCheckoutButton,
+#addAnotherButton,
+#addPromoCodeButton,
+.mppw-btn {
+    background-color: var(--primary) !important;
+
+    transition: background-color 0.1s ease-in-out !important;
+}
+
+#registerAndCheckoutButton:hover,
+#registerAndCheckoutButton:focus-visible,
+#addAnotherButton:hover,
+#addAnotherButton:focus-visible,
+#addPromoCodeButton:hover,
+#addPromoCodeButton:focus-visible,
+.mppw-btn:hover,
+.mppw-btn:focus-visible {
+    background-color: var(--primary-focus) !important;
+}
+
+/* Form fields */
+
+.mppw-form-field__alt-label {
+    display: block !important;
+
+    margin-bottom: 0 !important;
+    padding: 1rem !important;
+
+    font-size: 1rem !important;
+}
+
+.mppw-form-field-alt h3 {
+    margin: 0 !important;
+    margin-top: 0.25rem !important;
+}
+
+.mppw-form-field__control {
+    margin: 0.25rem !important;
+    padding: 1rem !important;
+
+    font-size: 1rem !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+/* Content styling */
+.mppw-product-description {
+    margin: 0 !important;
+    margin-bottom: 1rem !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+.mppw-product-options {
+    font-size: 1rem !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+#promoCodeContainer {
+    display: flex;
+    align-items: center !important;
+
+    padding: 0.25rem !important;
+}
+
+#promoCodeContainer h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 1rem !important;
+    text-align: center !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+#promoCodeContainer .mppw-form-field {
+    display: flex;
+    align-items: center !important;
+    gap: 1rem !important;
+
+    margin: 0 !important;
+    padding: 0.5rem !important;
+}
+
+#promoCodeText {
+    max-width: 10rem !important;
+
+    padding: 0.25rem 0.5rem !important;
+
+    font-size: 1rem !important;
+}
+
+/* Hide elements */
+.mppw-ics-link,
+#updateMyInfoContainer.mppw-form-field,
+.mpp-innerpage--back,
+/* #addAnotherButton, */
+/* #singlePriceContainer, */
+#mapContainer,
+#map,
+.mpp-innerpage--map-info,
+#mapAddress {
+    display: none !important;
+}

@@ -1,0 +1,148 @@
+:host {
+    --form-field-border: #09243f;
+    --form-field-border--active: #09243f;
+
+    --color-gray-900: oklch(21% 0.034 264.665);
+
+    --perimeter-light-blue: #60bbe9;
+    --perimeter-light-blue-2: #1c90ca;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: freight-display-pro !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+#registrationForm.mppw-form.mppw-form-validate
+    div#productOptionsWrapper
+    div#productOptionsContainer.product-form
+    div.mppw-form-field-alt.mpp-mt-10
+    div.product-form__control
+    table.mppw-product-options
+    tbody
+    tr
+    td.option-name {
+    font-family: sweet-sans-pro, 'Noto Sans', Helvetica, sans-serif !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+#userHasRegisteredContainer > div:nth-child(1),
+.mppw-form-field__label,
+.mppw-product-options,
+.mppw-product-description {
+    font-family: sweet-sans-pro, 'Noto Sans', Helvetica, sans-serif !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+#userHasRegisteredContainer > div:nth-child(1),
+.mppw-form-field__label {
+    font-weight: bold !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+/* Section headings / titles */
+#addressFormWrapper > h3:nth-child(1),
+#productOptionsTitle {
+    margin: 16px 0 0 0 !important;
+}
+
+/* Details block (kept separate since it has extra styling) */
+#detailsContainer {
+    display: none !important;
+
+    font-size: 0 !important;
+}
+
+/* Buttons */
+
+#registerAndCheckoutButton,
+#addAnotherButton {
+    margin: 8px 0 0 0 !important;
+}
+
+#registerAndCheckoutButton,
+#addAnotherButton,
+#addPromoCodeButton {
+    background-color: var(--perimeter-light-blue) !important;
+
+    transition: background-color 0.1s ease-in-out !important;
+}
+
+#registerAndCheckoutButton:hover,
+#addAnotherButton:hover,
+#addPromoCodeButton:hover {
+    background-color: var(--perimeter-light-blue-2) !important;
+}
+
+/* Form fields */
+.mppw-form-field__alt-label {
+    display: block !important;
+
+    margin-bottom: 1.5rem !important;
+    padding: 16px !important;
+
+    font-size: 16px !important;
+}
+
+.mppw-form-field__control {
+    padding: 16px !important;
+
+    font-size: 16px !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+/* Content styling */
+.mppw-product-description {
+    margin: 0 !important;
+    margin-bottom: 16px !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+.mppw-product-options {
+    font-size: 16px !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+#promoCodeContainer h3 {
+    margin: 0 !important;
+    margin-top: 16px !important;
+
+    color: var(--color-gray-900) !important;
+}
+
+#promoCodeContainer .mppw-form-field {
+    margin: 0 !important;
+    margin-top: 16px !important;
+}
+
+/* Hide elements */
+.mppw-ics-link,
+#updateMyInfoContainer.mppw-form-field,
+.mpp-innerpage--back,
+#addAnotherButton,
+#singlePriceContainer,
+#mapContainer,
+#map,
+.mpp-innerpage--map-info,
+#mapAddress {
+    display: none !important;
+}
+
+/* Responsive tweaks */
+@media only screen and (max-width: 415px) {
+    .mpp-innerpage--map-container {
+        display: none !important;
+    }
+}

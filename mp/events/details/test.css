@@ -1,0 +1,206 @@
+/* =======================================================================
+   Design Tokens
+   ----------------------------------------------------------------------- */
+
+:root,
+:host {
+    /* Brand */
+    --primary: #60bbe9;
+    --primary-focus: #1c90ca;
+
+    /* Typography / Color */
+    --color-gray-900: oklch(21% 0.034 264.665);
+    --root-text-color: var(--color-gray-900);
+
+    /* Form */
+    --form-field-border: var(--color-gray-900);
+    --form-field-border--active: var(--color-gray-900);
+
+    /* Fonts */
+    --font-sans: sweet-sans-pro, 'Noto Sans', Helvetica, sans-serif;
+    --font-display: freight-display-pro, 'Noto Sans', Helvetica, sans-serif;
+}
+
+/* =======================================================================
+   Global Resets
+   ----------------------------------------------------------------------- */
+
+* {
+    font-family: var(--font-sans) !important;
+}
+
+/* =======================================================================
+   Typography
+   ----------------------------------------------------------------------- */
+
+h1,
+h2,
+/* h3, */
+/* h4, */
+h5 {
+    font-family: var(--font-display) !important;
+    color: var(--color-gray-900) !important;
+}
+
+.mppw-form-field_instruction_font,
+#userHasRegisteredContainer > div:nth-child(1),
+.mppw-form-field__label,
+.mppw-product-options,
+.mppw-product-description,
+#registrationForm.mppw-form.mppw-form-validate
+    #productOptionsWrapper
+    #productOptionsContainer.product-form
+    .mppw-form-field-alt.mpp-mt-10
+    .product-form__control
+    table.mppw-product-options
+    tbody
+    tr
+    td.option-name {
+    color: var(--color-gray-900) !important;
+}
+
+.mppw-form-field_instruction_font {
+    font-size: 1rem;
+}
+
+.mppw-form-field__label {
+    background: none !important;
+}
+
+/* Emphasis labels */
+#userHasRegisteredContainer > div:nth-child(1),
+.mppw-form-field__label {
+    font-weight: bold !important;
+}
+
+/* Section headings / titles */
+#addressFormWrapper > h3:nth-child(1),
+#productOptionsTitle {
+    margin: 1rem 0 0 !important;
+}
+
+/* =======================================================================
+   Content Blocks
+   ----------------------------------------------------------------------- */
+
+/* Details block (hidden but keeping compatibility styles) */
+#detailsContainer {
+    display: none !important;
+    font-size: 0 !important;
+}
+
+/* Product description & options */
+.mppw-product-description {
+    margin: 0 0 1rem !important;
+    color: var(--color-gray-900) !important;
+}
+
+.mppw-product-options {
+    font-size: 1rem !important;
+    color: var(--color-gray-900) !important;
+}
+
+/* =======================================================================
+   Forms
+   ----------------------------------------------------------------------- */
+
+.mppw-form-field__alt-label {
+    display: block !important;
+    margin: 0 0 0 !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+}
+
+.mppw-form-field-alt h3 {
+    margin: 0.25rem 0 0 0 !important; /* top spacing only */
+}
+
+.mppw-form-field__control {
+    margin: 0.25rem !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+    color: var(--color-gray-900) !important;
+    /* If borders are applied by the vendor, your tokens exist for them: */
+    /* border-color: var(--form-field-border) !important; */
+}
+
+/* Promo code row */
+#promoCodeContainer {
+    display: flex;
+    align-items: center !important;
+    padding: 0.25rem !important;
+}
+
+#promoCodeContainer h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+    color: var(--color-gray-900) !important;
+}
+
+#promoCodeContainer .mppw-form-field {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin: 0 !important;
+    padding: 0.5rem !important;
+}
+
+#promoCodeText {
+    max-width: 10rem !important;
+    padding: 0.25rem 0.5rem !important;
+    font-size: 1rem !important;
+}
+
+/* =======================================================================
+   Buttons
+   ----------------------------------------------------------------------- */
+
+#registerAndCheckoutButton,
+#addAnotherButton {
+    margin: 0.5rem 0 0 !important;
+}
+
+#addPromoCodeButton {
+    max-width: none !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+}
+
+/* Primary button appearance (includes generic .mppw-btn) */
+#registerAndCheckoutButton,
+#addAnotherButton,
+#addPromoCodeButton,
+.mppw-btn {
+    background-color: var(--primary) !important;
+    transition: background-color 0.1s ease-in-out !important;
+}
+
+#registerAndCheckoutButton:hover,
+#registerAndCheckoutButton:focus-visible,
+#addAnotherButton:hover,
+#addAnotherButton:focus-visible,
+#addPromoCodeButton:hover,
+#addPromoCodeButton:focus-visible,
+.mppw-btn:hover,
+.mppw-btn:focus-visible {
+    background-color: var(--primary-focus) !important;
+}
+
+/* =======================================================================
+   Visibility / Utility Hides
+   ----------------------------------------------------------------------- */
+
+/* Toggle off unused/integration UI elements */
+.mppw-ics-link,
+#updateMyInfoContainer.mppw-form-field,
+.mpp-innerpage--back,
+/* #addAnotherButton, */
+/* #singlePriceContainer, */
+#mapContainer,
+#map,
+.mpp-innerpage--map-info,
+#mapAddress {
+    display: none !important;
+}
