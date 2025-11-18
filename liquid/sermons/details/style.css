@@ -1,0 +1,223 @@
+.vimeo-player {
+    width: 100%;
+}
+
+#vimeo-player {
+    width: 100%;
+}
+
+audio::-internal-media-controls-download-button {
+    display: none;
+}
+audio::-webkit-media-controls-enclosure {
+    overflow: hidden;
+}
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 33px);
+}
+
+@media (max-width: 768px) {
+    .mejs-player {
+        width: 100% !important;
+    }
+}
+
+.download-button {
+    background-color: #60bbe9 !important;
+    color: #fff !important;
+}
+
+.outline-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.listen-text-wrapper {
+    justify-content: center;
+    display: flex;
+    margin: 25px 0;
+}
+
+.mejs-player {
+    width: 50%;
+}
+
+a {
+    color: #72abbf !important;
+    text-decoration: none !important;
+}
+.template-wrapper {
+    width: 100%;
+    margin: auto;
+}
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    /* padding-top: 25px; */
+    height: 0;
+    border-radius: 0px;
+    overflow: hidden;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.more-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    /* padding-top: 25px; */
+    height: 0;
+    border-radius: 0px !important;
+    overflow: hidden;
+}
+.more-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.sermon-title h2 {
+    font-weight: 400;
+    line-height: 1;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.meta-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.speaker-name {
+    margin-right: 15px;
+    border-right: 1px solid #e9e5de;
+    margin-right: 19px;
+    padding-right: 19px;
+    font-weight: bold;
+}
+.sermon-date {
+    margin-right: 15px;
+    border-right: 1px solid #e9e5de;
+    margin-right: 19px;
+    padding-right: 19px;
+}
+.series-title {
+    margin-right: 15px;
+    margin-right: 19px;
+    padding-right: 19px;
+}
+.description {
+    margin-top: 55px !important;
+    padding-bottom: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.more-series-wrapper {
+    margin-top: 55px;
+}
+.more-series-card {
+    border: 1px solid #ededed;
+    background-color: #fff;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0.75% !important;
+    padding-bottom: 19px !important;
+    border-radius: 0px !important;
+    display: inline-block;
+}
+.more-meta {
+    margin: 0px 20px 0 20px;
+}
+.more-image img {
+    margin-bottom: 0 !important;
+}
+.more-series-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    position: relative;
+}
+
+details {
+    user-select: none;
+}
+
+details > summary span.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+    margin-left: auto;
+}
+
+details[open] summary span.icon {
+    transform: rotate(180deg);
+}
+
+summary {
+    display: flex;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+.meta-meta-wrapper {
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 16px !important;
+}
+.more-date,
+.more-speaker {
+    display: inline-block;
+}
+.more-date p {
+    padding-right: 16px !important;
+    margin-right: 13px;
+    border-right: 1px solid #e3e3e3;
+    font-size: 16px !important;
+    font-style: italic !important;
+}
+.more-date {
+    padding-bottom: 8px !important;
+}
+.more-speaker p {
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
+.more-title h2 {
+    font-size: 25px !important;
+    line-height: 28px !important;
+    font-weight: 400;
+    padding: 0px 0 5px 0px !important;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: #333;
+}
+.more-title a {
+    color: #333 !important;
+}
+.more-description p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+.listen-button {
+    background-color: #09243f !important;
+    padding: 14px 35px;
+    color: #fff !important;
+}

@@ -1,0 +1,142 @@
+<div class="template-wrapper">
+    {% for sermon in DataSet1 %}
+    <div class="sermon-title">
+        <h2>{{ sermon.Sermon_Title }}</h2>
+    </div>
+
+    <div class="sermon-details">
+        <div class="meta-wrapper">
+            <div class="sermon-date">
+                <p>{{ sermon.Sermon_Date }}</p>
+            </div>
+
+            <div class="speaker-name">
+                <p>
+                    <a
+                        href="{{ sermon.baseURL }}{{ sermon.finderSlug }}?speaker={{ sermon.Speaker_ID }}"
+                    >
+                        {{ sermon.Speaker }}
+                    </a>
+                </p>
+            </div>
+
+            <div class="series-title">
+                <p>
+                    <a
+                        href="{{ sermon.baseURL }}{{ sermon.finderSlug }}?series={{ sermon.Sermon_Series_ID }}#series-bio"
+                    >
+                        {{ sermon.Series }}
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe
+                id="vimeo-player"
+                src="{{ sermon.Watch_URL }}"
+                frameborder="0"
+            ></iframe>
+        </div>
+    </div>
+
+    <div class="listen-text-wrapper">
+        <h3 class="listen-text">Listen to Sermon</h3>
+    </div>
+
+    {% for audio in DataSet2 %}
+    <div class="button-wrapper">
+        <audio
+            class="mejs-player"
+            controls
+            preload="auto"
+            src="{{ audio.Listen_URL }}"
+        >
+            <source src="{{ audio.Listen_URL }}" type="audio/mpeg" />
+        </audio>
+    </div>
+    {% endfor %}
+
+    <div class="description">
+        <p>{{ sermon.Description }}</p>
+        <p class="scripture-links">Scripture: {{ sermon.Scripture_Links }}</p>
+
+        {% for outline in DataSet4 %}
+        <div class="outline-button-wrapper">
+            <a
+                class="download-button nectar-button large regular accent-color regular-button"
+                role="button"
+                href="{{ outline.Outline_URL }}"
+                target="_blank"
+            >
+                Download Outline
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %} {%- assign has_series_image = false -%} {% for series_item in
+    DataSet3 limit:1 %} {% if series_item.Photo_URL %} {%- assign
+    has_series_image = true -%} {% endif %} {% endfor %} {% if has_series_image
+    %}
+    <div class="more-series-wrapper">
+        <div class="more-series-header">
+            <h2>More From This Series</h2>
+        </div>
+
+        <div class="more-card-wrapper">
+            <ul class="more-series-list">
+                {% for series_sermon in DataSet3 %}
+                <li class="more-series-card">
+                    <a
+                        class="more-video-wrapper"
+                        href="{{ series_sermon.baseURL }}{{ series_sermon.detailSlug }}?id={{ series_sermon.Sermon_ID }}#series-bio"
+                    >
+                        <img
+                            class="vimeo-player"
+                            src="{{ series_sermon.Photo_URL }}"
+                            alt="{{ series_sermon.Sermon_Title }}"
+                        />
+                    </a>
+
+                    <div class="more-meta">
+                        <div class="meta-meta-wrapper">
+                            <div class="more-date">
+                                <p class="sermon-date">
+                                    {{ series_sermon.Sermon_Date }}
+                                </p>
+                            </div>
+
+                            <div class="more-speaker">
+                                <p>
+                                    <a
+                                        class="more-speaker-link"
+                                        href="{{ series_sermon.baseURL }}{{ series_sermon.finderSlug }}?speaker={{ series_sermon.Speaker_ID }}"
+                                    >
+                                        {{ series_sermon.Speaker }}
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="more-title">
+                            <h2>
+                                <a
+                                    class="more-title-link"
+                                    href="{{ series_sermon.baseURL }}{{ series_sermon.detailSlug }}?id={{ series_sermon.Sermon_ID }}"
+                                >
+                                    {{ series_sermon.Sermon_Title }}
+                                </a>
+                            </h2>
+                        </div>
+
+                        <div class="more-description">
+                            <p>{{ series_sermon.Description }}</p>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+</div>
