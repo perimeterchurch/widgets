@@ -1,0 +1,332 @@
+:root {
+    --mobile-container-width: 95% !important;
+}
+
+.intro-text {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding-right: 20px;
+}
+
+.search-button-container {
+    display: flex;
+    align-items: center;
+}
+.search-all-sermons {
+    background-color: #60bbe9 !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+#play-button {
+    padding-left: 26px !important;
+    background-color: #60bbe9 !important;
+}
+
+.bottom-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sermon-description span {
+    font-family: sweet-sans-pro !important;
+    font-size: 18px !important;
+}
+.sermon-description {
+    padding-bottom: 1em !important;
+}
+
+.recent-image-wrapper {
+    width: 45%;
+    position: relative;
+    overflow: hidden;
+}
+
+.recent-image-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(2);
+    background-color: black;
+}
+.recent-sermon-graphic {
+    height: 100% !important;
+    background-size: cover;
+    background-position: center;
+}
+
+#fws_663d176640638 {
+    padding: 0 !important;
+}
+
+.series-title {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+}
+.sermon-title {
+    font-size: 60px !important;
+    font-weight: 400;
+    margin-top: 2px;
+    line-height: 1.2 !important;
+}
+
+.sermon-speaker {
+    font-size: 16px !important;
+}
+.sermon-speaker a {
+    color: rgb(103, 103, 103) !important;
+}
+
+.sermon-date {
+    padding-bottom: 0 !important;
+    font-size: 16px !important;
+}
+
+.sermon-links,
+.sermon-series-link {
+    margin-top: 40px !important;
+    font-family: sweet-sans-pro !important;
+    color: rgb(103, 103, 103);
+}
+
+.recent-container {
+    max-width: 100%;
+    margin: auto;
+}
+.recent-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    border-radius: 0px;
+    justify-content: space-between;
+}
+
+.sermon-info-wrapper {
+    width: 55%;
+    padding: 0 20px;
+    padding-right: 50px;
+}
+
+.sermon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures the image covers the area */
+    border-radius: 0px;
+}
+
+.load-more-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 20px auto;
+    display: block;
+}
+
+.hide-sermon {
+    display: none;
+}
+
+.series-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+}
+.series-header {
+    padding: 20px;
+}
+
+.series-card {
+    background: white;
+    transition: 0.3s;
+    width: 32.13%; /* adjust as needed */
+    border-radius: 0px;
+    overflow: hidden;
+    text-align: left !important;
+    margin-bottom: 30px;
+}
+
+.series-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+    border-radius: 0px;
+}
+
+.series-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* ensures the image covers the area */
+    border-radius: 0px;
+    display: block;
+    margin-bottom: 5px !important;
+}
+
+.series-info-wrapper {
+    padding: 15px;
+    text-align: left;
+}
+
+.series-title-link {
+    font-size: 25px !important;
+    line-height: 28px !important;
+    font-weight: 400;
+    border-bottom: 1px solid #ececec;
+    padding: 0px 0 5px 0px !important;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.series-dates,
+.sermon-count {
+    color: #787878;
+    box-sizing: border-box;
+    padding: 2px 0 0 0px !important;
+    font-size: 13px !important;
+    line-height: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 430px) {
+    .recent-image-wrapper iframe {
+        top: 50px !important;
+        transform: scale(2) !important;
+    }
+}
+@media (max-width: 768px) {
+    .series-wrapper,
+    .recent-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .recent-image-wrapper {
+        width: 100%;
+        margin-top: 20px;
+        height: 250px;
+    }
+    .recent-image-wrapper iframe {
+        top: 75px !important;
+        transform: scale(2) !important;
+    }
+
+    .series-card,
+    .recent-wrapper {
+        width: 100% !important;
+    }
+    .sermon-title {
+        font-size: 40px !important;
+    }
+    .sermon-info-wrapper {
+        padding: 0 !important;
+    }
+    .intro-text {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 1024px) {
+    .recent-image-wrapper iframe {
+        transform: scale(3);
+    }
+}
+
+@media (max-width: 1290px) {
+    .series-card {
+        width: 32%;
+    }
+}
+
+@media (max-width: 1180px) {
+    .series-card {
+        width: 45%;
+    }
+}
+
+.sermon-wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.sermon-content {
+    background-color: #7d3c98; /* Purple background */
+    padding: 20px;
+    width: 250px; /* Adjust width as needed */
+    margin-right: 20px; /* Space between sidebar and main content */
+}
+
+.sermon-info {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.sermon-link {
+    color: #f7dc6f; /* Gold color for links */
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center; /* Align items vertically at the top */
+}
+
+.sermon-card {
+    /* ... Other styles */
+    display: flex; /* This makes it a flex container */
+    flex-direction: row; /* Lay out children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: center;
+    padding: 20px;
+}
+
+.mostrecentsermon {
+    font-size: 18px;
+    font-weight: 700;
+    color: #60bbe9;
+}
+
+/* Add an arrow after the sermon-series-link and remove the blue hyperlink color */
+.sermon-series-link {
+    color: #333; /* Change to your preferred color */
+    text-decoration: none; /* Removes underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sermon-card {
+        flex-direction: column; /* Stack children vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .sermon-image {
+        width: 100%; /* Full width on small screens */
+        flex: 0 0 auto; /* Override previous flex-basis */
+    }
+
+    .sermon-info-wrapper {
+        width: 100%; /* Full width on small screens */
+    }
+}

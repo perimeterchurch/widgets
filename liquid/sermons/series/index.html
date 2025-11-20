@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Sermon Series Widget</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="series-container">
+            <div
+                id="SermonSeriesFinderWidget"
+                data-component="CustomWidget"
+                data-sp="api_custom_Sermon_Series_Finder_Widget"
+                data-params="@Sermon_Series_Type=1"
+                data-template="template.html"
+                data-requireUser="false"
+                data-cache="false"
+                data-debug="false"
+                data-host="perimeter"
+            ></div>
+        </div>
+
+        <script type="text/javascript" src="script.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/perimeterchurch/widgets@0382006/scripts/PerimeterCustomWidget.js"></script>
+
+        <script
+            src="https://kit.fontawesome.com/9831e43717.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

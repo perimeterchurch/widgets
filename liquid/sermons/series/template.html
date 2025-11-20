@@ -1,0 +1,51 @@
+<div class="intro-text">
+    <h2 class="series-header">All Series</h2>
+
+    <div class="search-button-container">
+        {% assign ds3 = DataSet3[0] %} {% assign search_url = ds3.baseURL |
+        append: ds3.finderSlug %}
+        <a
+            class="search-all-sermons nectar-button large regular accent-color regular-button"
+            href="{{ search_url }}"
+            role="button"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i> Search All Sermons
+        </a>
+    </div>
+</div>
+
+<div class="series-wrapper">
+    {% for series in DataSet2 %} {% assign series_url = series.baseURL | append:
+    series.finderSlug | append: '?series=' | append: series.Sermon_Series_ID |
+    append: '#series-bio' %}
+
+    <div class="series-card">
+        <a href="{{ series_url }}">
+            <div class="series-image-wrapper">
+                <img
+                    class="series-image"
+                    src="{{ series.Photo_URL }}"
+                    alt="{{ series.Series_Title }} Image"
+                    loading="lazy"
+                />
+            </div>
+
+            <div class="series-details">
+                <h2 class="series-title">
+                    <a class="series-title-link" href="{{ series_url }}">
+                        {{ series.Series_Title }}
+                    </a>
+                </h2>
+
+                <p class="series-dates">
+                    {% if series.Start_Date == series.End_Date %} {{
+                    series.Start_Date }} {% else %} {{ series.Start_Date }} - {{
+                    series.End_Date }} {% endif %}
+                </p>
+
+                <p class="sermon-count">Sermons: {{ series.Sermon_Count }}</p>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
